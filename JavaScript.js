@@ -40,3 +40,6 @@ b = a;
 console.log(b); // "a"
 b = "c";
 console.log(a); // "a"
+
+var nothing;
+console.log(nothing); // null
