@@ -36,7 +36,7 @@ const ten = "Ten";
 var a = "a";
 var b = "b";
 
-b = a;
+b = a; // copy value
 console.log(b); // "a"
 b = "c";
 console.log(a); // "a"
