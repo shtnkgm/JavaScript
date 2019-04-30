@@ -19,16 +19,24 @@ Data Types
 */
 
 // Variable
-var eight = "Eight"
-eight = 8
-console.log(eight) // 8
+var eight = "Eight";
+eight = 8;
+console.log(eight); // 8
 
 // Variable (scoped)
-let nine = "Nine"
-nine = 9
-console.log(nine)
+let nine = "Nine";
+nine = 9;
+console.log(nine);
 
 // Constant
-const ten = "Ten"
+const ten = "Ten";
 // Error: SyntaxError: unknown: "ten" is read-only (/index.js:1)
-// ten = 10
+// ten = 10;
+
+var a = "a";
+var b = "b";
+
+b = a;
+console.log(b); // "a"
+b = "c";
+console.log(a); // "a"
