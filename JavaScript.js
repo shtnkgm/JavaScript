@@ -1,7 +1,34 @@
 console.log("Hello World");
 
-// inline comment
+// in-line comment
 
 /*
-    multi line comment
+    multi-line
+    comment
 */
+
+/*
+Data Types
+ - undefined
+ - null
+ - boolean
+ - string
+ - symbol
+ - number
+ - object
+*/
+
+// Variable
+var eight = "Eight"
+eight = 8
+console.log(eight) // 8
+
+// Variable (scoped)
+let nine = "Nine"
+nine = 9
+console.log(nine)
+
+// Constant
+const ten = "Ten"
+// Error: SyntaxError: unknown: "ten" is read-only (/index.js:1)
+// ten = 10
