@@ -1,14 +1,17 @@
+// playground code
+// https://scrimba.com/c/cMrnbqCK
+
 console.log("Hello World");
 
-// in-line comment
+// インラインコメント
 
 /*
-    multi-line
-    comment
+    複数行
+    コメント
 */
 
 /*
-Data Types
+データ型
  - undefined
  - null
  - boolean
@@ -18,17 +21,17 @@ Data Types
  - object
 */
 
-// Variable
+// グローバル変数
 var eight = "Eight";
 eight = 8;
 console.log(eight); // 8
 
-// Variable (scoped)
+// ローカル変数
 let nine = "Nine";
 nine = 9;
 console.log(nine);
 
-// Constant
+// 定数
 const ten = "Ten";
 // Error: SyntaxError: unknown: "ten" is read-only (/index.js:1)
 // ten = 10;
@@ -36,10 +39,10 @@ const ten = "Ten";
 var a = "a";
 var b = "b";
 
-b = a; // copy value
+b = a; // 値コピー
 console.log(b); // "a"
 b = "c";
-console.log(a); // "a"
+console.log(a); // "a"（値コピーなので変数aには影響しない）
 
 var nothing;
 console.log(nothing); // null
