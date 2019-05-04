@@ -27,9 +27,14 @@ eightValue = 8; // 値や型を変更することが可能
 console.log(eightValue); // 8
 
 // ローカル変数
-let nineValue = "Nine";
-nineValue = 9; // 値や型を変更することが可能
-console.log(nineValue);
+if (true) {
+    let nineValue = "Nine";
+    nineValue = 9; // 値や型を変更することが可能
+    console.log(nineValue);
+}
+// スコープ外からは参照できない
+// ReferenceError: nineValue is not defined (/index.js:37)
+// console.log(nineValue);
 
 // 定数
 const TEN_VALUE = "Ten";
