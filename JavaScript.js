@@ -22,12 +22,19 @@ console.log("Hello World");
 */
 
 // グローバル変数
-var eightValue = "Eight";
-eightValue = 8; // 値や型を変更することが可能
-console.log(eightValue); // 8
+{
+  var eightValue = "Eight";
+  eightValue = 8; // 値や型を変更することが可能
+  console.log(eightValue); // 8
+}
+console.log(eightValue);
+/*
+  varなしでもブラウザ環境によっては動作する
+  scrimba上では動作しない
+*/
 
 // ローカル変数
-if (true) {
+{
   let nineValue = "Nine";
   nineValue = 9; // 値や型を変更することが可能
   console.log(nineValue);
@@ -167,6 +174,22 @@ console.log(array); // [2, 3]
 array.unshift(0); // 先頭要素の追加
 console.log(array); // [0, 2, 3]
 
+// 型のチェック
+var checkType;
+console.log(typeof checkType); // undefined
+
+checkType = "a";
+console.log(typeof checkType); // string
+
+checkType = 1;
+console.log(typeof checkType); // number
+
+checkType = false
+console.log(typeof checkType); // boolean
+
+checkType = [1, 2]
+console.log(typeof checkType); // object
+
 // 関数
 
 // 引数なし
@@ -180,3 +203,17 @@ function getFullName(firstName, lastName) {
   return firstName + " " + lastName;
 }
 console.log(getFullName("John", "Smith")); // John Smith
+
+// スコープ
+var global = "a";
+let local = "b";
+
+function fun() {
+    var globalInFunction = "c"
+    let localInFunction = "d"
+    console.log(typeof global == "undefined"); // false
+    console.log(typeof local == "undefined"); // false
+}
+fun();
+console.log(typeof globalInFunction == "undefined"); // true
+console.log(typeof localInFunction == "undefined"); // true
