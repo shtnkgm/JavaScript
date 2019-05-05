@@ -21,25 +21,22 @@ console.log("Hello World");
  - object
 */
 
-// グローバル変数
-{
-  var eightValue = "Eight";
-  eightValue = 8; // 値や型を変更することが可能
-  console.log(eightValue); // 8
-}
-console.log(eightValue);
+// 変数
+var eightValue = "Eight";
+eightValue = 8; // 値や型を変更することが可能
+console.log(eightValue); // 8
 /*
   varなしでもブラウザ環境によっては動作する
   scrimba上では動作しない
 */
 
-// ローカル変数
+// 変数（ブロックレベルのスコープを持つ）
 {
   let nineValue = "Nine";
   nineValue = 9; // 値や型を変更することが可能
   console.log(nineValue);
 }
-// スコープ外からは参照できない
+// ブロック外からは参照できない
 // ReferenceError: nineValue is not defined (/index.js:37)
 // console.log(nineValue);
 
@@ -204,16 +201,13 @@ function getFullName(firstName, lastName) {
 }
 console.log(getFullName("John", "Smith")); // John Smith
 
-// スコープ
-var global = "a";
-let local = "b";
-
-function fun() {
-    var globalInFunction = "c"
-    let localInFunction = "d"
-    console.log(typeof global == "undefined"); // false
-    console.log(typeof local == "undefined"); // false
+// 関数スコープ
+var global = "a"
+function functionScope() {
+    var local = "b"
+    console.log(global); // a
 }
-fun();
-console.log(typeof globalInFunction == "undefined"); // true
-console.log(typeof localInFunction == "undefined"); // true
+functionScope();
+// ReferenceError: local is not defined (/index.js:216)
+// console.log(local);
+console.log(global); // a
