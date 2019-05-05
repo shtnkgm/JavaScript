@@ -138,13 +138,6 @@ console.log(aiueo); // かきくけこ
 var cat = "Cat";
 console.log(cat[cat.length - 1]); // t
 
-// 関数
-function getFullName(firstName, lastName) {
-  return firstName + " " + lastName;
-}
-
-console.log(getFullName("John", "Smith")); // John Smith
-
 // 配列
 
 // 配列の要素の型は同一でなくともよい
@@ -173,3 +166,17 @@ array.shift(); // 先頭要素の削除
 console.log(array); // [2, 3]
 array.unshift(0); // 先頭要素の追加
 console.log(array); // [0, 2, 3]
+
+// 関数
+
+// 引数なし
+function hello() {
+  console.log("Hello");
+}
+hello(); // Hello
+
+// 引数あり
+function getFullName(firstName, lastName) {
+  return firstName + " " + lastName;
+}
+console.log(getFullName("John", "Smith")); // John Smith
