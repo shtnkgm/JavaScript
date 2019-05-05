@@ -144,3 +144,32 @@ function getFullName(firstName, lastName) {
 }
 
 console.log(getFullName("John", "Smith")); // John Smith
+
+// 配列
+
+// 配列の要素の型は同一でなくともよい
+var array = ["あいうえお", 1, true];
+console.log(array[1]); // 1
+
+// 多重配列（多次元配列）
+var nestedArray = [["John", 20], ["Smith", 30]];
+console.log(nestedArray[0][1]); // 20
+
+// 配列の要素はミュータブル
+var originalArray = [1, 2, 3];
+originalArray[1] = 5;
+console.log(originalArray); // [1, 5, 3]
+
+// 配列のpush/pop関数による末尾要素の操作
+var stack = [1, 2, 3];
+stack.push(4); // 末尾に追加
+console.log(stack); // [1, 2, 3, 4]
+stack.pop(); // 末尾を削除
+console.log(stack); // [1, 2, 3]
+
+// 配列のshift/unshift関数による先頭要素の操作
+var array = [1, 2, 3];
+array.shift(); // 先頭要素の削除
+console.log(array); // [2, 3]
+array.unshift(0); // 先頭要素の追加
+console.log(array); // [0, 2, 3]
