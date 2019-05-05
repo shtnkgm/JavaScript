@@ -78,9 +78,44 @@ console.log(floatNumber / 10); // 0.0001
 // 剰余演算子
 console.log(10 % 4); // 2
 
-// +=演算子、-=演算子
+// +=演算子、-=演算子、*=演算子、/=演算子
 var price = 1000;
 price += 200;
 console.log(price); // 1200
 price -= 100;
 console.log(price); // 1100
+price *= 0.8;
+console.log(price); // 880
+price /= 2;
+console.log(price); // 440
+
+// 文字列内でのエスケープ
+var doubleQuoted = "Hello, \"World\"";
+console.log(doubleQuoted); // Hello, "World"
+var singleQuoted = 'Hello, "World"';
+console.log(singleQuoted);
+var backticked = `'Hello', "World"`;
+console.log(backticked); // 'Hello', "World"
+
+/*
+特殊記号のエスケープ
+\': シングルクオート
+\": ダブルクオート
+\\: バックスラッシュ
+\n: 改行
+\r: 行頭に戻る（CR: キャリッッジリターン）
+\t: タブ
+\b: バックスペース
+\f: 改ページ（FF: フォームフィード）
+*/
+
+// 文字列の連結
+var firstName = "Shota";
+var lastName = "Nakagami";
+var fullName = firstName + " " + lastName; // Shota Nakagami
+console.log(fullName);
+
+// +=演算子による文字列の連結
+var aiueo = "あいう";
+aiueo += "えお";
+console.log(aiueo); // あいうえお
