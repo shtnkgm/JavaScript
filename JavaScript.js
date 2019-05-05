@@ -28,9 +28,9 @@ console.log(eightValue); // 8
 
 // ローカル変数
 if (true) {
-    let nineValue = "Nine";
-    nineValue = 9; // 値や型を変更することが可能
-    console.log(nineValue);
+  let nineValue = "Nine";
+  nineValue = 9; // 値や型を変更することが可能
+  console.log(nineValue);
 }
 // スコープ外からは参照できない
 // ReferenceError: nineValue is not defined (/index.js:37)
@@ -110,12 +110,37 @@ console.log(backticked); // 'Hello', "World"
 */
 
 // 文字列の連結
-var firstName = "Shota";
-var lastName = "Nakagami";
-var fullName = firstName + " " + lastName; // Shota Nakagami
-console.log(fullName);
+var firstName = "John";
+var lastName = "Smith";
+var fullName = firstName + " " + lastName;
+console.log(fullName); // John Smith
 
 // +=演算子による文字列の連結
 var aiueo = "あいう";
 aiueo += "えお";
 console.log(aiueo); // あいうえお
+
+// 文字列長の取得
+console.log(aiueo.length); // 5
+
+// 文字列の添字によるアクセス
+console.log(aiueo[0]); // あ
+console.log(aiueo[1]); // い
+console.log(aiueo[5]); // null
+
+// 添字で取得した文字はイミュータブル、変更する場合は文字列全てを変更する必要あり
+// TypeError: Cannot assign to read only property '0' of string 'あいうえお' (/index.js:134)
+// aiueo[0] = "か";
+aiueo = "かきくけこ"
+console.log(aiueo); // かきくけこ
+
+// 文字列の最後の文字を取得する
+var cat = "Cat";
+console.log(cat[cat.length - 1]); // t
+
+// 関数
+function getFullName(firstName, lastName) {
+  return firstName + " " + lastName;
+}
+
+console.log(getFullName("John", "Smith")); // John Smith
