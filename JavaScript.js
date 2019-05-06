@@ -362,3 +362,29 @@ console.log(JSON.stringify(book)); // {"440":1300,"title":"The Book","price":150
 
 // JSON文字列を値に変換する
 console.log(JSON.parse('{"440":1300,"title":"The Book","price":1500,"category":["computer"]}'));
+
+// while
+var array = [];
+var i = 0;
+while(i < 10) {
+    array.push(i);
+    i++;
+}
+console.log(array); // [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+// for
+var array = [];
+var i = 0;
+for (var i = 0; i < 10; i++) {
+    array.push(i);
+}
+console.log(array); // [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+// do-while
+var array = [];
+var i = 100;
+do {
+    array.push(i);
+    i++;
+} while(i < 10)
+console.log(array); // [100]
