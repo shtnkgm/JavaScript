@@ -268,3 +268,97 @@ console.log(1 >= 1); // true
 // こういうのはないらしい
 // console.log(1 >== 1);
 // console.log(1 <== 1);
+
+// 論理演算子
+// OR
+console.log(true || false); // true
+// AND
+console.log(true && true); // true
+
+// 制御構文
+
+// switch
+var num = 1
+switch(num) {
+    case 1:
+    console.log("a");
+    break; // break分がないと次のケースに行ってしまう
+    case 2:
+    console.log("b");
+    break;
+}
+
+switch(num) {
+    case 1:
+    case 2:
+    console.log("b"); // 1or2の場合に実行される
+    break;
+}
+
+switch(num) {
+    case 3:
+    console.log("a");
+    break;
+    default:
+    console.log("b");
+    break;
+}
+
+// JavaScript Object
+
+var book = {
+  "title": "The Book",
+  "price": 1500,
+  "category": ["computer"]
+};
+
+console.log(book.title);
+console.log(book.price);
+console.log(book.category[0]);
+
+// プロパティの更新
+book[price] = 1300;
+console.log(book[price]); // 1300
+
+// なんかキーの型によって値へのアクセスの仕方が異なるっぽい
+var hoge = {
+    10: "a",
+    20: "b",
+    [1]: "c",
+    true: "d",
+    abc: "e"
+};
+console.log(hoge[10]);
+console.log(hoge[20]);
+console.log(hoge[[1]]);
+console.log(hoge[[true]]);
+console.log(hoge.abc);
+
+// プロパティの追加
+book.author = "John Smith";
+console.log(book.author);
+
+// プロパティの削除
+delete book.author;
+console.log(book.author); // null
+
+// プロパティが存在するかどうか
+console.log(book.hasOwnProperty("title"));
+
+// ネストしたオブジェクト
+var nestedObject = {
+    "a": {
+      "b": {
+         "c": "onion"
+      }
+    }
+};
+console.log(nestedObject.a.b.c); // onion
+
+// JSON
+
+// 値からJSON文字列に変換する
+console.log(JSON.stringify(book)); // {"440":1300,"title":"The Book","price":1500,"category":["computer"]}
+
+// JSON文字列を値に変換する
+console.log(JSON.parse('{"440":1300,"title":"The Book","price":1500,"category":["computer"]}'));
