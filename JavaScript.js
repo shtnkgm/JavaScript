@@ -6,8 +6,8 @@ console.log("Hello World");
 // インラインコメント
 
 /*
-    複数行
-    コメント
+  複数行
+  コメント
 */
 
 /*
@@ -142,6 +142,9 @@ console.log(aiueo); // かきくけこ
 var cat = "Cat";
 console.log(cat[cat.length - 1]); // t
 
+// 文字列内での変数の展開(`内のみ)
+console.log(`This is a ${cat}`);
+
 // 配列
 
 // 配列の要素の型は同一でなくともよい
@@ -204,8 +207,8 @@ console.log(getFullName("John", "Smith")); // John Smith
 // 関数スコープ
 var global = "a"
 function functionScope() {
-    var local = "b"
-    console.log(global); // a
+  var local = "b"
+  console.log(global); // a
 }
 functionScope();
 // ReferenceError: local is not defined (/index.js:216)
@@ -230,9 +233,9 @@ console.log(array); // [1, 2]
 var condition = true;
 
 if (condition) {
-    console.log("true");
+  console.log("true");
 } else {
-    console.log("false");
+  console.log("false");
 }
 
 // ==演算子による比較
@@ -280,28 +283,28 @@ console.log(true && true); // true
 // switch
 var num = 1
 switch(num) {
-    case 1:
-    console.log("a");
-    break; // break分がないと次のケースに行ってしまう
-    case 2:
-    console.log("b");
-    break;
+  case 1:
+  console.log("a");
+  break; // break分がないと次のケースに行ってしまう
+  case 2:
+  console.log("b");
+  break;
 }
 
 switch(num) {
-    case 1:
-    case 2:
-    console.log("b"); // 1or2の場合に実行される
-    break;
+  case 1:
+  case 2:
+  console.log("b"); // 1or2の場合に実行される
+  break;
 }
 
 switch(num) {
-    case 3:
-    console.log("a");
-    break;
-    default:
-    console.log("b");
-    break;
+  case 3:
+  console.log("a");
+  break;
+  default:
+  console.log("b");
+  break;
 }
 
 // JavaScript Object
@@ -322,11 +325,11 @@ console.log(book[price]); // 1300
 
 // なんかキーの型によって値へのアクセスの仕方が異なるっぽい
 var hoge = {
-    10: "a",
-    20: "b",
-    [1]: "c",
-    true: "d",
-    abc: true
+  10: "a",
+  20: "b",
+  [1]: "c",
+  true: "d",
+  abc: true
 };
 console.log(hoge[10]);
 console.log(hoge[20]);
@@ -347,11 +350,11 @@ console.log(book.hasOwnProperty("title"));
 
 // ネストしたオブジェクト
 var nestedObject = {
-    "a": {
-      "b": {
-         "c": "onion"
-      }
+  "a": {
+    "b": {
+     "c": "onion"
     }
+  }
 };
 console.log(nestedObject.a.b.c); // onion
 
@@ -367,8 +370,8 @@ console.log(JSON.parse('{"440":1300,"title":"The Book","price":1500,"category":[
 var array = [];
 var i = 0;
 while(i < 10) {
-    array.push(i);
-    i++;
+  array.push(i);
+  i++;
 }
 console.log(array); // [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
@@ -376,7 +379,7 @@ console.log(array); // [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 var array = [];
 var i = 0;
 for (var i = 0; i < 10; i++) {
-    array.push(i);
+  array.push(i);
 }
 console.log(array); // [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
@@ -384,8 +387,8 @@ console.log(array); // [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 var array = [];
 var i = 100;
 do {
-    array.push(i);
-    i++;
+  array.push(i);
+  i++;
 } while(i < 10)
 console.log(array); // [100]
 
@@ -403,38 +406,56 @@ console.log(condition ? "a" : "b"); // b
 
 // try-catch
 function func1(value) {
-    if (value == 0) {
-        throw "ZeroValue";
-    }
+  if (value == 0) {
+    throw "ZeroValue";
+  }
 
-    if (value < 0) {
-        throw "NegativeValue";
-    }
+  if (value < 0) {
+    throw "NegativeValue";
+  }
 }
 
 try {
-    func1(-1);
+  func1(-1);
 } catch (e) {
-    console.log(e);
+  console.log(e);
 }
 /*
 finally {
-    console.log("finally block");
+  console.log("finally block");
 }
 */
 
 // 無名関数
 var func1 = function(a, b) {
-    return a + b;
+  return a + b;
 }
 console.log(func1(1, 3)); // 4
 
 // 即時関数
 var func2 = (function(a, b) {
-    return a + b;
+  return a + b;
 })(1, 3);
 console.log(func2); // 4
 
-// アロー関数
-var func3 = (a, b) => a + b;
+// arrow関数
+const func3 = (a, b) => a + b;
 console.log(func3(1, 3)); // 4
+
+// 高階関数
+
+// filter
+var numbers = [1, 2, 3, 4, 5];
+console.log(numbers.filter(num => num % 2 == 0)); // [2, 4]
+
+// map
+console.log(numbers.map(num => num * 2)); // [2, 4, 6, 8, 10]
+
+// find
+console.log(numbers.find(num => num % 2 == 0)); // 2
+
+// reduce
+console.log(numbers.reduce((result, value) => result + value)) // 15
+
+// forEach
+numbers.forEach(value => { console.log(value); });
