@@ -1,3 +1,4 @@
+
 // playground code
 // https://scrimba.com/c/cMrnbqCK
 
@@ -459,3 +460,36 @@ console.log(numbers.reduce((result, value) => result + value)) // 15
 
 // forEach
 numbers.forEach(value => { console.log(value); });
+
+// クラス
+class User {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    description() {
+        return `${this.name} is ${this.age}`
+    }
+
+    get customName() {
+        return this.name;
+    }
+
+    set costomName(value) {
+        this.name = value;
+    }
+
+    static className() {
+        return "User";
+    }
+}
+
+var user = new User("Smith", 20);
+console.log(user.description());
+console.log(user.customName);
+
+user.costomName = "John";
+console.log(user.customName);
+
+console.log(User.className());
