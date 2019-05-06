@@ -326,7 +326,7 @@ var hoge = {
     20: "b",
     [1]: "c",
     true: "d",
-    abc: "e"
+    abc: true
 };
 console.log(hoge[10]);
 console.log(hoge[20]);
@@ -388,3 +388,53 @@ do {
     i++;
 } while(i < 10)
 console.log(array); // [100]
+
+// Math
+
+// ランダム値の取得
+console.log(Math.random()); // 小数値が出力される
+
+// 整数に丸める（端数切り捨て）
+console.log(Math.floor(1.5)); // 1
+
+// 3項演算子
+var condition = false
+console.log(condition ? "a" : "b"); // b
+
+// try-catch
+function func1(value) {
+    if (value == 0) {
+        throw "ZeroValue";
+    }
+
+    if (value < 0) {
+        throw "NegativeValue";
+    }
+}
+
+try {
+    func1(-1);
+} catch (e) {
+    console.log(e);
+}
+/*
+finally {
+    console.log("finally block");
+}
+*/
+
+// 無名関数
+var func1 = function(a, b) {
+    return a + b;
+}
+console.log(func1(1, 3)); // 4
+
+// 即時関数
+var func2 = (function(a, b) {
+    return a + b;
+})(1, 3);
+console.log(func2); // 4
+
+// アロー関数
+var func3 = (a, b) => a + b;
+console.log(func3(1, 3)); // 4
