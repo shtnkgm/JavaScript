@@ -211,3 +211,9 @@ functionScope();
 // ReferenceError: local is not defined (/index.js:216)
 // console.log(local);
 console.log(global); // a
+
+// objcectを引数に受け取る場合は参照渡しになる
+var array = [1, 2, 3];
+function popArray(array) {
+  array.pop();
+}
