@@ -1,4 +1,3 @@
-
 // playground code
 // https://scrimba.com/c/cMrnbqCK
 
@@ -493,3 +492,12 @@ user.costomName = "John";
 console.log(user.customName);
 
 console.log(User.className());
+
+// 継承
+class SuperUser extends User {
+    static className() {
+        return "SuperUser";
+    }
+}
+
+console.log(SuperUser.className());
