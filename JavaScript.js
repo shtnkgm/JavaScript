@@ -217,3 +217,54 @@ var array = [1, 2, 3];
 function popArray(array) {
   array.pop();
 }
+popArray(array);
+console.log(array); // [1, 2]
+
+// Boolean
+
+/*
+ - true
+ - false
+*/
+
+var condition = true;
+
+if (condition) {
+    console.log("true");
+} else {
+    console.log("false");
+}
+
+// ==演算子による比較
+console.log(1 == 1); // true
+console.log(1 == [1]); // true
+console.log(1 == "1"); // true
+
+// ===演算子による比較（型も同時にチェック）
+console.log(1 === 1); // true
+console.log(1 === [1]); // false
+console.log(1 === "1"); // false
+
+// !=演算子による比較
+console.log(1 != 1); // false
+console.log(1 != [1]); // false
+console.log(1 != "1"); // false
+
+// !==演算子による比較（型も同時にチェック）
+console.log(1 !== 1); // false
+console.log(1 !== [1]); // true
+console.log(1 !== "1"); // true
+
+// <, >, >=, <=演算子による比較
+console.log(1 < 2); // true
+console.log(1 < 1); // false
+console.log(1 <= 2); // true
+console.log(1 <= 1); // true
+console.log(2 > 1); // false
+console.log(1 > 1); // false
+console.log(2 >= 1); // true
+console.log(1 >= 1); // true
+
+// こういうのはないらしい
+// console.log(1 >== 1);
+// console.log(1 <== 1);
